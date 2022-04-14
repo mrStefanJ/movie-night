@@ -1,0 +1,47 @@
+<div class="back">
+    <a (click)="goBack()" class="back-link">Back</a>
+</div>
+<div *ngIf="movie" class="movie-detail">
+    <div class="movie-detail__image--center">
+        <img [src]="movie.image" class="image" alt="movie" />
+        <h2>{{ movie.name }}</h2>
+    </div>
+    <div class="movie-detail__content">
+        <div class="content--border">
+            <div class="title-content">Genres:</div>
+            <ul class="genres-list-item">
+                <li class="items" *ngFor="let genre of movie.genre; let i = index">
+                    {{ genre }}
+                </li>
+            </ul>
+        </div>
+        <div class="content--border">
+            <div class="title-content">
+            Release:
+            </div>
+            <div class="date-release w-50">
+                {{ movie.releaseYear }}
+            </div>
+        </div>
+        <div class="content--border">
+            <div class="title-content">
+                Raiting:
+            </div>
+            <div class="date-release w-50">
+                <app-movie-rating [rating]="movie.rating" [color]="starColor">
+                </app-movie-rating>
+                <!-- <app-movie-rating 
+            [rating]="movie.rating" 
+            [starCount]="starCount"
+            [color]="starColor"
+            (ratingUpdate)="onRatingChanged($event)"
+            >
+        </app-movie-rating> -->
+            </div>
+        </div>
+    </div>
+    <div class="movie-detail__story">
+        <h2>About Movie</h2>
+        <p class="story">{{ movie.story }}</p>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+@import '../assets/style/variable';
+@import '../assets/style/mixin';
+
+@import './navbar/navbar.component.scss';
+@import './movie/movie-list/movie-list.component.scss';
+@import './movie/movie/movie.component.scss';
+@import './movie/add-movie/add-movie.component.scss';

@@ -1,0 +1,25 @@
+<div class="back">
+    <a [routerLink]="['/']" class="back-link">Back</a>
+</div>
+<form class="form" [formGroup]="movieForm" (ngSubmit)="addMovie()">
+    <label for="name">Name</label>
+    <input type="text" placeholder="Name" class="form-input" formControlName="name" />
+
+    <input type="text" placeholder="Image" class="form-input" formControlName="image" />
+
+    <input type="text" placeholder="ReleaseYear" class="form-input" formControlName="releaseYear" />
+
+    <textarea placeholder="Story" class="form-input" formControlName="story" ></textarea>
+    
+    <div *ngIf="genres$ | async as genres" class="form-checkbox">
+        <h3>Genres</h3>
+        <div *ngFor="let genre of genres; let i = index">
+            <input type="checkbox" [value]="genre.name" (change)="changeSelection($event)" />
+            <label>{{genre.name}}</label>
+        </div>
+    </div>
+    <div class="form-btn">
+        <button type="submit" class="btn btn-success" [disabled]="!movieForm.valid">Add</button>
+        <button class="btn btn-close" (click)="resetForm()">Close</button>
+    </div>
+</form>

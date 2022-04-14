@@ -1,0 +1,27 @@
+<app-movie-search 
+    (movieName)="resName=$event"
+    (movieGenre)="resGenre=$event"
+    >
+</app-movie-search>
+<ul *ngIf="allMovies$ | async as movies; else loading" class="movies-list" [@listAnimation]="movies">
+    <li class="movie" *ngFor="let movie of movies | searchFilter: [resName, resGenre]: ['name','genre']">
+        <a [routerLink]="[movie.id]" class="movie-link">
+            <img [src]="movie.image" class="img-size__small" alt="movie" />
+            <p class="movie-title">{{ movie.name }}</p>
+        </a>
+
+        <!-- <div class="hearth-icon">
+            <i *ngIf="addToList" class="fa-solid fa-heart" (click)="handleRemoveFromWishlist()"></i>
+            <i *ngIf="!addToList" class="fa-regular fa-heart" (click)="handleAddToWishlist()"></i>
+        </div> -->
+        <!-- <app-movie-like [wishlistData]="movie" [moveiID]="movie.id"></app-movie-like> -->
+    </li>
+</ul>
+
+<ng-template #loading>
+    <ul class="movies-list" [@listAnimation]="loadingMovies.length">
+        <li *ngFor="let movies of loadingMovies" class="movie" [@listAnimation]="loadingMovies.length">
+            <img src="/assets/img/movienight.jpg" class="img-size__small" alt="movie" />
+        </li>
+    </ul>
+</ng-template>

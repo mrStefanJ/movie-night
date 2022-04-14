@@ -1,0 +1,12 @@
+<div class="form-center">
+    <form class="formSearch">
+        <label class="formSearch__label">Movie Name</label>
+        <input type="text" class="formSearch__input" #movieName (keyup)="onCangeName(movieName.value)" />
+        <label class="formSearch__label">Genre</label>
+        <input type="text" class="formSearch__input" #movieGenre (keyup)="onCangeGender(movieGenre.value)" />
+        <!-- <select [formControl]="moveGenre" >
+        <option value="">--Select Genre</option>
+        <option value="1"></option>
+    </select> -->
+    </form>
+</div>

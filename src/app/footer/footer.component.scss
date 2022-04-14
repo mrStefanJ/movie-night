@@ -1,0 +1,9 @@
+@import "../../assets/style/variable";
+.footer {
+  margin-top: 20px;
+  padding: 30px 0;
+  width: 100%;
+  background: linear-gradient(to right, $orange-dark, $red-light);
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,194 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Terminator 2: Judgement Day",
+      "genre": [
+        "Sci-Fi"
+      ],
+      "image": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
+      "releaseYear": "1991",
+      "story": "In this sequel set eleven years after 'The Terminator', young John Connor (Edward Furlong), the key to civilization's victory over a future robot uprising, is the target of the shape-shifting T-1000 (Robert Patrick), a Terminator sent from the future to kill him. Another Terminator, the revamped T-800 (Arnold Schwarzenegger), has been sent back to protect the boy. As John and his mother (Linda Hamilton) go on the run with the T-800, the boy forms an unexpected bond with the robot.",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "image": "https://m.media-amazon.com/images/M/MV5BYTViNzMxZjEtZGEwNy00MDNiLWIzNGQtZDY2MjQ1OWViZjFmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+      "name": "The Terminator",
+      "genre": [
+        "Sci-Fi"
+      ],
+      "releaseYear": "1984",
+      "story": "Disguised as a human, a cyborg assassin known as a Terminator (Arnold Schwarzenegger) travels from 2029 to 1984 to kill Sarah Connor (Linda Hamilton). Sent to protect Sarah is Kyle Reese (Michael Biehn), who divulges the coming of Skynet, an artificial intelligence system that will spark a nuclear holocaust. Sarah is targeted because Skynet knows that her unborn son will lead the fight against them. With the virtually unstoppable Terminator in hot pursuit, she and Kyle attempt to escape.",
+      "rating": 2
+    },
+    {
+      "id": 3,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_.jpg",
+      "name": "Pirates of the Caribbean: Dead Man's Chest",
+      "genre": [
+        "Action",
+        "Adventure"
+      ],
+      "releaseYear": "2006",
+      "story": "When ghostly pirate Davy Jones (Bill Nighy) comes to collect a blood debt, Capt. Jack Sparrow (Johnny Depp) must find a way to avoid his fate lest his soul be damned for all time. Nevertheless, the wily ghost manages to interrupt the wedding plans of Jack's friends Will Turner (Orlando Bloom) and Elizabeth Swann (Keira Knightley).",
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+      "name": "Despicable Me",
+      "genre": [
+        "Animation"
+      ],
+      "releaseYear": "2010",
+      "story": "Supervillain Gru, a man who delights in all things wicked, hatches a plan to steal the moon. Surrounded by an army of little yellow minions and his impenetrable arsenal of weapons and war machines, Gru prepares to vanquish all who stand in his way. However, nothing in his calculations and groundwork has prepared him for his greatest challenge: three adorable orphan girls who want to make him their dad.",
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ0NDcyNjg0MV5BMl5BanBnXkFtZTgwMzk4NTA4MTE@._V1_SY1000_CR0,0,631,1000_AL_.jpg",
+      "name": "A Million Ways to Die in the West",
+      "genre": [
+        "Comedy",
+        "Western"
+      ],
+      "releaseYear": "2014",
+      "story": "Mild-mannered sheep farmer Albert Stark (Seth MacFarlane) feels certain that the Western frontier is trying to kill him, then he loses his girlfriend, Louise (Amanda Seyfried), to the town's most successful businessman. However, a beautiful, pistol-packing woman named Anna (Charlize Theron) rides into town and helps Albert find his inner courage. Then Stark must put his newfound bravery to the test when Anna's outlaw husband arrives with plans to plant him in an unmarked grave.",
+      "rating": 2
+    },
+    {
+      "id": 6,
+      "image": "https://m.media-amazon.com/images/M/MV5BNDU4Mzc3NzE5NV5BMl5BanBnXkFtZTgwMzE1NzI1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "name": "Pokémon Detective Pikachu",
+      "genre": [
+        "Action",
+        "Comedy"
+      ],
+      "releaseYear": "2019",
+      "story": "Ace detective Harry Goodman goes mysteriously missing, prompting his 21-year-old son, Tim, to find out what happened. Aiding in the investigation is Harry's former Pokémon partner, wise-cracking, adorable super-sleuth Detective Pikachu. Finding that they are uniquely equipped to work together, as Tim is the only human who can talk with Pikachu, they join forces to unravel the tangled mystery.",
+      "rating": 3
+    },
+    {
+      "id": 7,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+      "name": "Toy Story 4",
+      "genre": [
+        "Animation",
+        "Comedy"
+      ],
+      "releaseYear": "2019",
+      "story": "Woody, Buzz Lightyear and the rest of the gang embark on a road trip with Bonnie and a new toy named Forky. The adventurous journey turns into an unexpected reunion as Woody's slight detour leads him to his long-lost friend Bo Peep. As Woody and Bo discuss the old days, they soon start to realize that they're worlds apart when it comes to what they want from life as a toy.",
+      "rating": 4
+    },
+    {
+      "name": "John Wick 3",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,648,1000_AL_.jpg",
+      "genre": [
+        "Action"
+      ],
+      "releaseYear": "2019",
+      "id": 8,
+      "story": "After gunning down a member of the High Table -- the shadowy international assassin's guild -- legendary hit man John Wick finds himself stripped of the organization's protective services. Now stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York as he becomes the target of the world's most ruthless killers.",
+      "rating": 5
+    },
+    {
+      "name": "Avengers: Endgame",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+      "genre": [
+        "Action"
+      ],
+      "releaseYear": "2019",
+      "id": 9,
+      "story": "Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe.",
+      "rating": 5
+    },
+    {
+      "name": "Captain Marvel",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+      "genre": [
+        "Action"
+      ],
+      "releaseYear": "2019",
+      "id": 10,
+      "story": "Captain Marvel is an extraterrestrial Kree warrior who finds herself caught in the middle of an intergalactic battle between her people and the Skrulls. Living on Earth in 1995, she keeps having recurring memories of another life as U.S. Air Force pilot Carol Danvers. With help from Nick Fury, Captain Marvel tries to uncover the secrets of her past while harnessing her special superpowers to end the war with the evil Skrulls.",
+      "rating": 3
+    },
+    {
+      "name": "Terminator: Dark Fate",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTUwNWI2ZDQtODRjNy00OGE1LThlNGEtYzU2NDU5ZGMzN2RmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SY1000_CR0,0,640,1000_AL_.jpg",
+      "genre": [
+        "Action"
+      ],
+      "releaseYear": "2019",
+      "id": 11,
+      "story": "In Mexico City, a newly modified liquid Terminator -- the Rev-9 model -- arrives from the future to kill a young factory worker named Dani Ramos. Also sent back in time is Grace, a hybrid cyborg human who must protect Ramos from the seemingly indestructible robotic assassin. But the two women soon find some much-needed help from a pair of unexpected allies -- seasoned warrior Sarah Connor and the T-800 Terminator.",
+      "rating": 3
+    },
+    {
+      "name": "Star Wars The Rise of Skywalker",
+      "image": "https://scitechdaily.com/images/Star-Wars-The-Rise-of-Skywalker.jpg",
+      "genre": [
+        "Action",
+        "Si-fi"
+      ],
+      "releaseYear": "2019",
+      "id": 12,
+      "story": "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo Ren. Warning: Some flashing-lights scenes in this film may affect photosensitive viewers.",
+      "rating": 4
+    },
+    {
+      "name": "UNCHARTED",
+      "image": "https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmPosterGraphic/HO00002313?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500",
+      "genre": [
+        "Action"
+      ],
+      "releaseYear": "2022",
+      "id": 13,
+      "story": "EMPTY",
+      "rating": 2
+    },
+    {
+      "name": "Back to the Future",
+      "image": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "genre": [
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "releaseYear": "1985",
+      "id": 14,
+      "story": "In this 1980s sci-fi classic, small-town California teen Marty McFly (Michael J. Fox) is thrown back into the '50s when an experiment by his eccentric scientist friend Doc Brown (Christopher Lloyd) goes awry. Traveling through time in a modified DeLorean car, Marty encounters young versions of his parents (Crispin Glover, Lea Thompson), and must make sure that they fall in love or he'll cease to exist. Even more dauntingly, Marty has to return to his own time and save the life of Doc Brown.",
+      "rating": 5
+    }
+  ],
+  "wishListMovie": [
+    
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Adventure"
+    },
+    {
+      "id": 3,
+      "name": "Comedy"
+    },
+    {
+      "id": 4,
+      "name": "Sci-Fi"
+    },
+    {
+      "id": 5,
+      "name": "Animation"
+    },
+    {
+      "id": 6,
+      "name": "Western"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<nav class="nav" role="heading">
+    <h1 class="nav-title">{{ title$ | async }}</h1>
+    <!-- <button mat-button (click)="drawer.toggle()">Sidenav</button> -->
+    <button class="nav-btn" routerLink="movies/add" *ngIf="!router.url.includes('movie/add')">Add New Movie</button>
+</nav>

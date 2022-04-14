@@ -1,0 +1,37 @@
+@import '../../assets/style/variable';
+@import '../../assets/style/mixin';
+
+.nav {
+  position: relative;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: linear-gradient(to right, $orange-dark, $red-light);
+
+  &-title {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    font-size: 18px;
+    @include breakpoint(tablet){
+      font-size: 24px;
+  }
+
+  }
+  &-btn {
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      box-shadow: -7px 3px 5px 3px;
+      font-size: 18px;
+      color: $white;
+      background: linear-gradient(to right, $blue ,$blue-light) ;
+      transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover{
+            color: $blue;
+            background: $white;
+            transform: translateY(-2px) scale(1.1);
+        }
+  }
+}

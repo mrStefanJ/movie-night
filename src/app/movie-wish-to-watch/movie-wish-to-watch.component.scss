@@ -1,0 +1,19 @@
+@import '~ngx-toastr/toastr';
+
+.movie-item{
+    position: relative;
+    .movie-image{
+        width: 100%;
+    }
+    .btn-remove{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        background: linear-gradient(to right, #f27121, #e94057);
+        cursor: pointer;
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}

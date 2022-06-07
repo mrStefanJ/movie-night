@@ -1,0 +1,13 @@
+<div class="movie" *ngIf="movie.length > 0">
+    <ul class="movie__list-to-watch" *ngFor="let item of movie">
+        <li class="movie-item">
+            <img class="movie-image" [src]="item.img" [alt]="item.name">
+            <p class="movie-name">{{ item.name }}</p>
+            <button class="btn btn-remove" (click)="removeMove(item.id)">X</button>
+        </li>
+    </ul>
+</div>
+<div *ngIf="movie.length === 0">
+    <h1 class="message">You haven't choose which move, you would like to watch!!!</h1>
+</div>
+<button type="button" class="btn btn-close" (click)="onToggleClose()">Close</button>

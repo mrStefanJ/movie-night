@@ -1,34 +1,31 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {map} from 'rxjs/operators';
+import { map } from 'rxjs';
+import { WishToWatch } from '../models/wishToWatch.model';
+// import { Movie } from '../models/movie.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MovieLikeService {
-  private MOVIELIKE_ROOT_URL = 'http://localhost:3000/movieLike';
+  private MOVIELIKE_ROOT_URL = 'http://localhost:3000/wishToWatch';
 
   constructor(private http: HttpClient) {}
 
-  // display wishlist
-  getWishlist() {
-    return this.http.get(`${this.MOVIELIKE_ROOT_URL}`)
-      .pipe(map((res: any) => {
-        let movieIds: any[] = [];
-
-        res.array.forEach((item: { id: any; }) => {
-           movieIds.push(item.id); 
-        });
-
-        return movieIds;
-      }))
+  addWishToWatchMovie(movie: WishToWatch){
+    const data = {
+      id: movie.id,
+      img: movie.image,
+      name: movie.name
+    };
+    return this.http.post<any>(`${this.MOVIELIKE_ROOT_URL}`,data);
   }
-  // add wishlist
-  addWishlist(movieId: any) {
-    return this.http.post(`${this.MOVIELIKE_ROOT_URL}`, {id: movieId });
+
+  getWishListTowatch(){
+    return this.http.get<any>(`${this.MOVIELIKE_ROOT_URL}`);
   }
-  // remove wishlist
-  removeFromWishlist(movieId: any) {
-    return this.http.delete(`${this.MOVIELIKE_ROOT_URL}/${movieId}`);
+
+  removeMove(id: string){
+    return this.http.delete<any>(`${this.MOVIELIKE_ROOT_URL}/`+id);
   }
 }

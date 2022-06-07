@@ -2,9 +2,11 @@
 
 .movie-item{
     position: relative;
+    text-align: center;
     .movie-image{
         width: 100%;
     }
+
     .btn-remove{
         position: absolute;
         top: 0;
@@ -15,5 +17,12 @@
         &:hover{
             color: #ffffff;
         }
+    }
+}
+
+.close-sidenav{
+    text-align: center;
+    .btn-close{
+        margin-left: 0;
     }
 }

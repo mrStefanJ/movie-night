@@ -1,5 +1,5 @@
-@import '../../assets/style/variable';
-@import '../../assets/style/mixin';
+@import "../../assets/style/variable";
+@import "../../assets/style/mixin";
 
 .nav {
   position: relative;
@@ -14,24 +14,47 @@
     padding: 0;
     color: $white;
     font-size: 18px;
-    @include breakpoint(tablet){
+    @include breakpoint(tablet) {
       font-size: 24px;
+    }
   }
 
-  }
-  &-btn {
-      padding: 10px;
+  .total {
+    position: relative;
+    .total-movie {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: white;
+      width: 20px;
+      height: 20px;
       border-radius: 20px;
-      border: none;
-      box-shadow: -7px 3px 5px 3px;
-      font-size: 18px;
-      color: $white;
-      background: linear-gradient(to right, $blue ,$blue-light) ;
-      transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-        &:hover{
-            color: $blue;
-            background: $white;
-            transform: translateY(-2px) scale(1.1);
-        }
+      text-align: center;
+      .number {
+        color: blue;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-btn {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: -7px 3px 5px 3px;
+    font-size: 18px;
+    color: $white;
+    background: linear-gradient(to right, $blue, $blue-light);
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:hover {
+      color: $blue;
+      background: $white;
+      transform: translateY(-2px) scale(1.1);
+    }
+  }
+  .btn_movie-list {
+    background: transparent;
+    cursor: pointer;
   }
 }

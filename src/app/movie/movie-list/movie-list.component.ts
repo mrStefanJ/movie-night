@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import {
   animate,
@@ -11,9 +11,10 @@ import {
 import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { Movie } from '../models/movie.model';
 import { MovieService } from '../services/movie-service.service';
-import { FormControl, FormGroup } from '@angular/forms';
-import { MovieLike } from '../models/like.model';
+import { FormControl } from '@angular/forms';
 import { MovieLikeService } from '../services/movie-like.service';
+import { WishToWatch } from '../models/wishToWatch.model';
+import { ToastrService } from 'ngx-toastr';
 
 const GENRE_OPTIONS = [
   'Action',
@@ -56,30 +57,24 @@ const GENRE_OPTIONS = [
     ]),
   ],
 })
-export class MovieListComponent implements OnInit, AfterViewInit {
+export class MovieListComponent implements OnInit {
   public resGenre!: any;
-  public resName! : string;
-  
-  @Input() movieLike!: MovieLike;
+  public resName!: string;
 
   allMovies$!: Observable<Movie[]>;
+
   loadingMovies!: Array<Number>;
 
   searchFilter?: string;
-  isDrawerOpen?: boolean;
 
-  formFilter!: FormGroup;
-
-  // public moveName: string = '';
-  // moveName = new FormControl('');
-  // moveGenre = new FormControl('');
-
-  addToList: boolean = false;
+  moveName = new FormControl('');
+  moveGenre = new FormControl('');
 
   constructor(
     private moviesService: MovieService,
     private navbarService: NavbarService,
-    private movielikeServer: MovieLikeService
+    private movieWishList: MovieLikeService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -92,18 +87,17 @@ export class MovieListComponent implements OnInit, AfterViewInit {
     this.allMovies$ = this.moviesService.getAllMovie();
   }
 
-  ngAfterViewInit(): void {
-    
+  addToCard(movie: WishToWatch) {
+      this.movieWishList.addWishToWatchMovie(movie).subscribe({
+        next: res => {
+          console.log(res)
+          this.toastr.success('Add to wish to watch!', 'Movie');
+          this.movieWishList.getWishListTowatch();
+        },
+        error: err => {
+          console.log(err);
+          this.toastr.warning('You have already add','Movie')
+        }
+      });
   }
-  // handleAddToWishlist() {
-  //   this.movielikeServer.addWishlist(this.movieLike?.id).subscribe((res) => {
-  //     this.addToList = true;
-  //   });
-  // }
-
-  // handleRemoveFromWishlist() {
-  //   this.movielikeServer.removeFromWishlist(this.movieLike?.id).subscribe(() => {
-  //       this.addToList = false;
-  //     });
-  // }
 }

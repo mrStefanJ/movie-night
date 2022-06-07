@@ -1,6 +1,10 @@
 @import '../../../assets/style/variable';
 @import '../../../assets/style/mixin';
 
+.form-container{
+  height: 800px;
+}
+
 .form {
   max-width: 500px;
   margin: 0px auto;
@@ -50,4 +54,11 @@
     background: $white;
     color: $red-light;
   }
+}
+
+.error-message{
+  color: red;
+  font-size: 16px;
+  margin-left: 10px;
+  font-style: italic;
 }

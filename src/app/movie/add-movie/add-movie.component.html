@@ -1,25 +1,53 @@
-<div class="back">
-    <a [routerLink]="['/']" class="back-link">Back</a>
-</div>
-<form class="form" [formGroup]="movieForm" (ngSubmit)="addMovie()">
-    <label for="name">Name</label>
-    <input type="text" placeholder="Name" class="form-input" formControlName="name" />
-
-    <input type="text" placeholder="Image" class="form-input" formControlName="image" />
-
-    <input type="text" placeholder="ReleaseYear" class="form-input" formControlName="releaseYear" />
-
-    <textarea placeholder="Story" class="form-input" formControlName="story" ></textarea>
-    
-    <div *ngIf="genres$ | async as genres" class="form-checkbox">
-        <h3>Genres</h3>
-        <div *ngFor="let genre of genres; let i = index">
-            <input type="checkbox" [value]="genre.name" (change)="changeSelection($event)" />
-            <label>{{genre.name}}</label>
+<div class="form-container">
+    <div class="back">
+        <a [routerLink]="['/']" class="back-link">Back</a>
+    </div>
+    <form class="form" [formGroup]="movieForm" (ngSubmit)="addMovie()">
+        <input type="text" placeholder="Name" class="form-input" formControlName="name" />
+        <div *ngIf="movieForm.controls['name'].touched || submitted" class="error-message">
+            <div *ngIf="movieForm.controls['name'].errors?.required">
+                Name of movie is required
+            </div>
         </div>
-    </div>
-    <div class="form-btn">
-        <button type="submit" class="btn btn-success" [disabled]="!movieForm.valid">Add</button>
-        <button class="btn btn-close" (click)="resetForm()">Close</button>
-    </div>
-</form>
+
+        <input type="text" placeholder="Image" class="form-input" formControlName="image" />
+        <div *ngIf="movieForm.controls['image'].touched || submitted" class="error-message">
+            <div *ngIf="movieForm.controls['image'].errors?.required">
+                Image is required
+            </div>
+        </div>
+
+        <input type="text" placeholder="ReleaseYear" class="form-input" formControlName="releaseYear" />
+        <div *ngIf="movieForm.controls['releaseYear'].touched || submitted" class="error-message">
+            <div *ngIf="movieForm.controls['releaseYear'].errors?.required">
+                Date is required
+            </div>
+        </div>
+
+        <textarea placeholder="Story" class="form-input" formControlName="story"></textarea>
+        <div *ngIf="movieForm.controls['story'].touched || submitted" class="error-message">
+            <div *ngIf="movieForm.controls['story'].errors?.required">
+                Story of movie is required
+            </div>
+        </div>
+
+        <div *ngIf="genres$ | async as genres" class="form-checkbox" formControlName="genre">
+            <h3>Genres</h3>
+            <div *ngFor="let genre of genres; let i = index">
+                <input type="checkbox" [value]="genre.name" (change)="changeSelection($event)" />
+                <label>{{genre.name}}</label>
+            </div>
+        </div>
+        <div *ngIf="movieForm.controls['genre'].touched || submitted" class="error-message">
+            <div *ngIf="movieForm.controls['genre'].errors?.required">
+                Genre is required
+            </div>
+        </div>
+
+        <div class="form-btn">
+            <!-- <button type="submit" class="btn btn-success" [disabled]="!movieForm.valid">Add</button> -->
+            <button type="submit" class="btn btn-success">Add</button>
+            <button class="btn btn-close" (click)="resetForm()">Close</button>
+        </div>
+    </form>
+</div>

@@ -1,3 +1,12 @@
-<app-navbar (open)="navOpen()"></app-navbar>
-<app-drawer [openNav]="isOpen"></app-drawer>
-<app-footer></app-footer>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav>
+       <app-movie-wish-to-watch (closeSideNav)="sidenav.toggle()"></app-movie-wish-to-watch>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-navbar (sideNavToggle)="sidenav.toggle()"></app-navbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+        <app-footer></app-footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

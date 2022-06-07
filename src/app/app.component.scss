@@ -3,5 +3,16 @@
 
 @import './navbar/navbar.component.scss';
 @import './movie/movie-list/movie-list.component.scss';
-@import './movie/movie/movie.component.scss';
+@import '../app/movie/movie-detail/movie/movie.component.scss';
 @import './movie/add-movie/add-movie.component.scss';
+
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color: #f4f4f4;
+}
